@@ -14,6 +14,9 @@
     <Filter Include="src\vector3">
       <UniqueIdentifier>{668da3fb-bb07-4988-a511-c106a0679629}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Quaternion">
+      <UniqueIdentifier>{3bb52f96-835d-4d5e-b20f-9147dd9d76d0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MyMath.h">
@@ -25,10 +28,16 @@
     <ClInclude Include="src\Vector3.h">
       <Filter>src\vector3</Filter>
     </ClInclude>
+    <ClInclude Include="src\Quaternion.h">
+      <Filter>src\Quaternion</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Vector3.cpp">
       <Filter>src\vector3</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Quaternion.cpp">
+      <Filter>src\Quaternion</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -141,9 +141,11 @@
   <ItemGroup>
     <ClInclude Include="src\Math.h" />
     <ClInclude Include="src\MyMath.h" />
+    <ClInclude Include="src\Quaternion.h" />
     <ClInclude Include="src\Vector3.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Quaternion.cpp" />
     <ClCompile Include="src\Vector3.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
