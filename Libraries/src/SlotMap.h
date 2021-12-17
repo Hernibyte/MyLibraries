@@ -28,7 +28,7 @@ namespace My {
 			_value[slot.id] = std::move(value);
 			_erase[slot.id] = reserved_slot_id;
 
-			auto key { slot };
+			auto key{ slot };
 			key.id = reserved_slot_id;
 
 			return key;
@@ -60,10 +60,10 @@ namespace My {
 		[[nodiscard]] constexpr index_type allocate() {
 			if (_size >= Capacity) throw std::runtime_error("SlotMap is full");
 			assert(_freelist < Capacity);
-			
+
 			auto slot_id = _freelist;
 			_freelist = _index[slot_id].id;
-			
+
 			auto& slot = _index[slot_id];
 			slot.id = _size;
 			slot.gen = _generation;
@@ -75,14 +75,14 @@ namespace My {
 		}
 		[[nodiscard]] constexpr void free(key_type key) noexcept {
 			assert(is_valid(key));
-		
+
 			auto& slot = _index[key.id];
 			auto data_id = slot.id;
-		
+
 			slot.id = _freelist;
 			slot.gen = _generation;
 			_freelist = key.id;
-		
+
 			if (data_id != _size - 1) {
 				_value[data_id] = _value[_size - 1];
 				_erase[data_id] = _erase[_size - 1];

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Archivos de recursos">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="List">
+      <UniqueIdentifier>{1adad8cf-bfd6-413f-aa24-4ecb12aea75a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SlotMap">
+      <UniqueIdentifier>{06a0f553-9930-467f-8c4b-f23345055377}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Node">
+      <UniqueIdentifier>{a9c78de8-9688-4d14-b423-b31da4b1d12c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyMath">
+      <UniqueIdentifier>{94e4df81-1437-46cd-8190-4f6b7bce0230}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\SlotMap.h">
+      <Filter>SlotMap</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
