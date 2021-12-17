@@ -51,7 +51,7 @@ float My::Vector3::Magnitude(Vector3 vector) noexcept
 {
 	return Magnitude(vector.x, vector.y, vector.z);
 }
-My::Vector3 My::Vector3::Cross(Vector3 a, Vector3 b)
+My::Vector3 My::Vector3::Cross(Vector3 a, Vector3 b) noexcept
 {
 	Vector3 result;
 	result.x = a.y * b.z - a.z * b.y;
@@ -59,20 +59,20 @@ My::Vector3 My::Vector3::Cross(Vector3 a, Vector3 b)
 	result.z = a.x * b.y - a.y * b.x;
 	return result;
 }
-float My::Vector3::Distance(Vector3 a, Vector3 b)
+float My::Vector3::Distance(Vector3 a, Vector3 b) noexcept
 {
 	return Sqrt(
 		Pow((a.x - b.x), 2) +
 		Pow((a.y - b.y), 2) +
 		Pow((a.z - b.z), 2));
 }
-float My::Vector3::Dot(Vector3 a, Vector3 b)
+float My::Vector3::Dot(Vector3 a, Vector3 b) noexcept
 {
 	return a.x * b.x +
 		a.y * b.y +
 		a.z * b.z;
 }
-My::Vector3 My::Vector3::Lerp(Vector3 a, Vector3 b, float t)
+My::Vector3 My::Vector3::Lerp(Vector3 a, Vector3 b, float t) noexcept
 {
 	if (t < 0.0f)
 		t = 0.0f;
@@ -80,7 +80,7 @@ My::Vector3 My::Vector3::Lerp(Vector3 a, Vector3 b, float t)
 		t = 1.0f;
 	return LerpUnclamped(a, b, t);
 }
-My::Vector3 My::Vector3::LerpUnclamped(Vector3 a, Vector3 b, float t)
+My::Vector3 My::Vector3::LerpUnclamped(Vector3 a, Vector3 b, float t) noexcept
 {
 	Vector3 result;
 	result.x = a.x + (b.x - a.x) * t;
@@ -88,7 +88,7 @@ My::Vector3 My::Vector3::LerpUnclamped(Vector3 a, Vector3 b, float t)
 	result.z = a.z + (b.z - a.z) * t;
 	return result;
 }
-My::Vector3 My::Vector3::Max(Vector3 a, Vector3 b)
+My::Vector3 My::Vector3::Max(Vector3 a, Vector3 b) noexcept
 {
 	Vector3 result;
 	result.x = (a.x > b.x) ? a.x : b.x;
@@ -96,7 +96,7 @@ My::Vector3 My::Vector3::Max(Vector3 a, Vector3 b)
 	result.z = (a.z > b.z) ? a.z : b.z;
 	return result;
 }
-My::Vector3 My::Vector3::Min(Vector3 a, Vector3 b)
+My::Vector3 My::Vector3::Min(Vector3 a, Vector3 b) noexcept
 {
 	Vector3 result;
 	result.x = (a.x < b.x) ? a.x : b.x;
@@ -104,11 +104,11 @@ My::Vector3 My::Vector3::Min(Vector3 a, Vector3 b)
 	result.z = (a.z < b.z) ? a.z : b.z;
 	return result;
 }
-float My::Vector3::SqrMagnitude(Vector3 vector)
+float My::Vector3::SqrMagnitude(Vector3 vector) noexcept
 {
 	return Sqrt(Magnitude(vector));
 }
-My::Vector3 My::Vector3::Normalize(Vector3& vector)
+My::Vector3 My::Vector3::Normalize(Vector3& vector) noexcept
 {
 	vector.x = vector.x / Magnitude(vector.x, vector.y, vector.z);
 	vector.y = vector.y / Magnitude(vector.x, vector.y, vector.z);
@@ -116,33 +116,33 @@ My::Vector3 My::Vector3::Normalize(Vector3& vector)
 	return vector;
 }
 
-My::Vector3 My::Vector3::Project(Vector3 vector, Vector3 onNormal)
+My::Vector3 My::Vector3::Project(Vector3 vector, Vector3 onNormal) noexcept
 {
 	return (Dot(vector, onNormal) / Pow(Magnitude(onNormal), 2) * onNormal);
 }
-My::Vector3 My::Vector3::Reflect(Vector3 inDirection, Vector3 inNormal)
+My::Vector3 My::Vector3::Reflect(Vector3 inDirection, Vector3 inNormal) noexcept
 {
 	inNormal.Normalize();
 	return inDirection - 2 * (Dot(inDirection, inNormal)) * inNormal;
 }
 
-void My::Vector3::Set(float x, float y, float z)
+void My::Vector3::Set(float x, float y, float z) noexcept
 {
 	Vector3::x = x;
 	Vector3::y = y;
 	Vector3::z = z;
 }
-void My::Vector3::Scale(Vector3 scale)
+void My::Vector3::Scale(Vector3 scale) noexcept
 {
 	Set(x * scale.x, y * scale.y, z * scale.z);
 }
-void My::Vector3::Normalize()
+void My::Vector3::Normalize() noexcept
 {
 	Vector3::x = Vector3::x / Magnitude(Vector3::x, Vector3::y, Vector3::z);
 	Vector3::y = Vector3::y / Magnitude(Vector3::x, Vector3::y, Vector3::z);
 	Vector3::z = Vector3::z / Magnitude(Vector3::x, Vector3::y, Vector3::z);
 }
-My::Vector3 My::Vector3::Normalized()
+My::Vector3 My::Vector3::Normalized() noexcept
 {
 	Vector3 result;
 	result.x = Vector3::x / Magnitude(Vector3::x, Vector3::y, Vector3::z);

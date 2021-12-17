@@ -30,23 +30,23 @@ namespace My {
 		static Vector3 ClampMagnitude(Vector3 vector, float maxLength) noexcept;
 		static float Magnitude(Vector3 vector) noexcept;
 		static float Magnitude(float x, float y, float z) noexcept;
-		static Vector3 Cross(Vector3 a, Vector3 b);
-		static float Distance(Vector3 a, Vector3 b);
-		static float Dot(Vector3 a, Vector3 b);
-		static Vector3 Lerp(Vector3 a, Vector3 b, float t);
-		static Vector3 LerpUnclamped(Vector3 a, Vector3 b, float t);
-		static Vector3 Max(Vector3 a, Vector3 b);
-		static Vector3 Min(Vector3 a, Vector3 b);
-		static float SqrMagnitude(Vector3 vector);
-		static Vector3 Normalize(Vector3& vector);
-		static Vector3 Project(Vector3 vector, Vector3 onNormal);
-		static Vector3 Reflect(Vector3 inDirection, Vector3 inNormal);
+		static Vector3 Cross(Vector3 a, Vector3 b) noexcept;
+		static float Distance(Vector3 a, Vector3 b) noexcept;
+		static float Dot(Vector3 a, Vector3 b) noexcept;
+		static Vector3 Lerp(Vector3 a, Vector3 b, float t) noexcept;
+		static Vector3 LerpUnclamped(Vector3 a, Vector3 b, float t) noexcept;
+		static Vector3 Max(Vector3 a, Vector3 b) noexcept;
+		static Vector3 Min(Vector3 a, Vector3 b) noexcept;
+		static float SqrMagnitude(Vector3 vector) noexcept;
+		static Vector3 Normalize(Vector3& vector) noexcept;
+		static Vector3 Project(Vector3 vector, Vector3 onNormal) noexcept;
+		static Vector3 Reflect(Vector3 inDirection, Vector3 inNormal) noexcept;
 
 		// methods
-		void Set(float newX, float newY, float newZ);
-		void Scale(Vector3 scale);
-		void Normalize();
-		Vector3 Normalized();
+		void Set(float newX, float newY, float newZ) noexcept;
+		void Scale(Vector3 scale) noexcept;
+		void Normalize() noexcept;
+		Vector3 Normalized() noexcept;
 
 		// operators 
 		Vector3& operator = (const Vector3& p);
