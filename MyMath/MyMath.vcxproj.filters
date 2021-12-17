@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Archivos de recursos">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{bc17fc5a-7d50-4d30-a1aa-d1d7acd2cc4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\MathExtension">
+      <UniqueIdentifier>{d46a98ab-4603-47b0-b845-e16bc47e9401}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\vector3">
+      <UniqueIdentifier>{668da3fb-bb07-4988-a511-c106a0679629}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\MyMath.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Math.h">
+      <Filter>src\MathExtension</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vector3.h">
+      <Filter>src\vector3</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Vector3.cpp">
+      <Filter>src\vector3</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
