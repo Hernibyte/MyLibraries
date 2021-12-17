@@ -78,6 +78,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\obj\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -139,7 +141,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\List.h" />
+    <ClInclude Include="src\Math.h" />
+    <ClInclude Include="src\MyMath.h" />
+    <ClInclude Include="src\Node_t.h" />
+    <ClInclude Include="src\Quaternion.h" />
     <ClInclude Include="src\SlotMap.h" />
+    <ClInclude Include="src\Vector3.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Quaternion.cpp" />
+    <ClCompile Include="src\Vector3.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

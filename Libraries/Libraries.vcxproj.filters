@@ -17,10 +17,45 @@
     <Filter Include="MyMath">
       <UniqueIdentifier>{94e4df81-1437-46cd-8190-4f6b7bce0230}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MyMath\MathEx">
+      <UniqueIdentifier>{a1b3a3a9-f375-41b1-920f-d2ce8d2fc612}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyMath\Quaternion">
+      <UniqueIdentifier>{a7538f6b-e615-4098-b5d2-934a2b575218}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyMath\Vector3">
+      <UniqueIdentifier>{f2c29279-b9e4-472c-9727-76d304600dd4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\SlotMap.h">
       <Filter>SlotMap</Filter>
     </ClInclude>
+    <ClInclude Include="src\Node_t.h">
+      <Filter>Node</Filter>
+    </ClInclude>
+    <ClInclude Include="src\List.h">
+      <Filter>List</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MyMath.h">
+      <Filter>MyMath</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Math.h">
+      <Filter>MyMath\MathEx</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Quaternion.h">
+      <Filter>MyMath\Quaternion</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vector3.h">
+      <Filter>MyMath\Vector3</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Quaternion.cpp">
+      <Filter>MyMath\Quaternion</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vector3.cpp">
+      <Filter>MyMath\Vector3</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

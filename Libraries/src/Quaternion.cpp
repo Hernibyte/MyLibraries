@@ -293,7 +293,7 @@ My::Quaternion My::Quaternion::SlerpUnclamped(Quaternion a, Quaternion b, float 
 	return resultInterpolated;
 }
 
-My::Quaternion My::Quaternion::operator=(const Quaternion& quaternion) {
+void My::Quaternion::operator=(const Quaternion& quaternion) {
 	this->x = quaternion.x;
 	this->y = quaternion.y;
 	this->z = quaternion.z;

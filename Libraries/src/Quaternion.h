@@ -66,7 +66,7 @@ namespace My {
 		static Quaternion SlerpUnclamped(Quaternion a, Quaternion b, float t) noexcept;
 
 		// Operators
-		Quaternion operator=(const Quaternion& quaternion);
+		void operator=(const Quaternion& quaternion);
 	};
 
 	//Vector3 operator*(Quaternion a, Quaternion b);
