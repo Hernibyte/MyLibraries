@@ -118,6 +118,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -141,16 +142,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\List.h" />
+    <ClInclude Include="src\List_t.h" />
     <ClInclude Include="src\Math.h" />
     <ClInclude Include="src\MyMath.h" />
     <ClInclude Include="src\Node_t.h" />
-    <ClInclude Include="src\Quaternion.h" />
     <ClInclude Include="src\SlotMap.h" />
     <ClInclude Include="src\Vector3.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Quaternion.cpp" />
     <ClCompile Include="src\Vector3.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

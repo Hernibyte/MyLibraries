@@ -34,7 +34,7 @@
     <ClInclude Include="src\Node_t.h">
       <Filter>Node</Filter>
     </ClInclude>
-    <ClInclude Include="src\List.h">
+    <ClInclude Include="src\List_t.h">
       <Filter>List</Filter>
     </ClInclude>
     <ClInclude Include="src\MyMath.h">
@@ -43,17 +43,11 @@
     <ClInclude Include="src\Math.h">
       <Filter>MyMath\MathEx</Filter>
     </ClInclude>
-    <ClInclude Include="src\Quaternion.h">
-      <Filter>MyMath\Quaternion</Filter>
-    </ClInclude>
     <ClInclude Include="src\Vector3.h">
       <Filter>MyMath\Vector3</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Quaternion.cpp">
-      <Filter>MyMath\Quaternion</Filter>
-    </ClCompile>
     <ClCompile Include="src\Vector3.cpp">
       <Filter>MyMath\Vector3</Filter>
     </ClCompile>
